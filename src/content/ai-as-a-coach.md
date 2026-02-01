@@ -15,7 +15,7 @@ Things are also moving very fast. New models, new workflows, new expectations. I
 
 The risk is subtle. Efficiency quietly becomes shorthand for speed, and speed becomes a way to outsource thinking.
 
-![blog placeholder](../../assets/ai-as-a-coach/image1.jpg)
+![blog placeholder](../assets/ai-as-a-coach/image1.jpg)
 
 ## A Better Mental Model: AI as a Coach for Your Thinking
 
@@ -33,7 +33,7 @@ A simple test applies to any AI-assisted work: if you can’t clearly explain it
 
 The question I keep coming back to is simple: is AI helping me think better, or just faster? If we optimize for better thinking instead of visible AI usage, the efficiency we care about will follow.
 
-![blog placeholder](../../assets/ai-as-a-coach/image2.jpg)
+![blog placeholder](../assets/ai-as-a-coach/image2.jpg)
 
 # Core idea I want to carry forward
 
@@ -45,6 +45,6 @@ For me, AI—especially GPT-5—has been most valuable as a way to reach that cl
 
 Once clarity of thinking is achieved, speed, efficiency, and execution tend to follow naturally. Clarity is the real leverage point.
 
-![blog placeholder](../../assets/ai-as-a-coach/image3.jpg)
-![blog placeholder](../../assets/ai-as-a-coach/image4.jpg)
-![blog placeholder](../../assets/ai-as-a-coach/image5.jpg)
+![blog placeholder](../assets/ai-as-a-coach/image3.jpg)
+![blog placeholder](../assets/ai-as-a-coach/image4.jpg)
+![blog placeholder](../assets/ai-as-a-coach/image5.jpg)

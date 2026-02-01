@@ -34,9 +34,9 @@ Astro 5.x site with MDX support, deployed to GitHub Pages via GitHub Actions.
 
 **Content System:**
 
-- Journal entries live in `src/content/journal/` as `.md` or `.mdx` files
+- Entries live in `src/content/` as `.md` or `.mdx` files
 - Content schema defined in `src/content.config.ts` — entries require `title`, `description`, `pubDate`; optional `updatedDate`
-- Use `getCollection('journal')` to query entries
+- Use `getCollection('entries')` to query entries
 
 **Key Files:**
 
