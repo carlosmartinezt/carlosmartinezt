@@ -60,4 +60,4 @@ Pushes to `main` trigger automatic deployment to GitHub Pages via `.github/workf
 - Default: https://carlosmartinezt.github.io/carlosmartinezt/
 - Custom domain: https://carlosmartinezt.com
 
-**GitHub Pages base path:** Since the site is deployed to a subdirectory (`/carlosmartinezt/`), `astro.config.mjs` conditionally sets `base: '/carlosmartinezt'` only when `CI` env var is present (set by GitHub Actions). This allows localhost to work at the root while production gets the correct base path. If a custom domain is configured later, remove the conditional logic and set `site` to the custom domain.
+**Custom domain:** The site uses `carlosmartinezt.com` as the custom domain. The `public/CNAME` file tells GitHub Pages to serve from this domain. No `base` path is needed with a custom domain.
