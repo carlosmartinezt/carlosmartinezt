@@ -1,0 +1,48 @@
+# LLMs.txt - Carlos Martinez Tuanama Journal
+
+## Core Stack
+
+**Astro 5.x** - https://docs.astro.build/
+- Static site generator with content collections
+- MDX support for rich content
+- Image optimization built-in
+
+**Key Patterns Used:**
+- Content Collections with glob loader
+- Dynamic routing via `[...slug].astro`
+- Scoped CSS in `.astro` components
+
+## Content System
+
+**Schema** (`src/content.config.ts`):
+```typescript
+{
+  title: string,           // Required
+  description: string,     // Required
+  pubDate: Date,          // Required
+  author: string,         // Default: "Carlos Martinez Tuanama"
+  updatedDate?: Date,     // Optional
+  heroImage?: ImageMetadata, // Optional
+  slug?: string           // Optional URL override
+}
+```
+
+**URL Resolution:**
+1. Frontmatter `slug` if present
+2. Filename (without .md/.mdx)
+3. Folder name for `index.md` files
+
+## Deployment
+
+GitHub Pages via GitHub Actions.
+
+**Workflow:** `.github/workflows/deploy.yml`
+- Triggers on push to `main`
+- Builds with `npm run build`
+- Deploys to GitHub Pages
+
+**Live URL:** https://carlosmartinezt.com
+
+## No External APIs
+
+This is a fully static site with no runtime dependencies or external API calls.
