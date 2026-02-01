@@ -1,47 +1,63 @@
 ---
 import { SITE_TITLE } from '../consts';
-import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+    <a href="/" class="site-title">{SITE_TITLE}</a>
+    <div class="nav-links">
+      <a href="/about">About</a>
     </div>
   </nav>
 </header>
+
 <style>
   header {
-    margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  h2 {
-    margin: 0;
-    font-size: 1em;
+    border-bottom: 1px solid var(--border);
   }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
   nav {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
+
+  .site-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .site-title:hover {
+    color: var(--link);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
     text-decoration: none;
   }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
+
+  .nav-links a:hover {
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 1rem;
+    }
+
+    .nav-links {
+      gap: 1rem;
+    }
   }
 </style>
