@@ -22,6 +22,14 @@ Live site: https://carlosmartinezt.github.io/carlosmartinezt/
 
 ## Creating a New Entry
 
+**Option A: GitHub Web Interface**
+1. Go to `github.com/carlosmartinezt/carlosmartinezt`
+2. Navigate to `src/content/`
+3. Click "Add file" → "Create new file"
+4. Name it `my-post.md`, paste content with frontmatter below
+5. Commit — site auto-deploys
+
+**Option B: Local**
 1. Create a new `.md` file in `src/content/`
 2. Add frontmatter at the top:
 
@@ -103,3 +111,15 @@ src/
   components/        <- Header, Footer, etc.
   styles/            <- global.css
 ```
+
+---
+
+## Future Features (when needed)
+
+**Tags**: Add `tags: ['clarity', 'chess']` to frontmatter, create `/tags/[tag]` page
+
+**Archive by year/month**: Create `/archive/[year]` routes
+
+**Search**: Use [Pagefind](https://pagefind.app/) — lightweight static search for Astro
+
+**Headless CMS**: [Decap CMS](https://decapcms.org/) or [Tina](https://tina.io/) for a web-based editor

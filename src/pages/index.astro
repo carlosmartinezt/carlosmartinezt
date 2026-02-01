@@ -1,10 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
+
+import profilePic from '../assets/images/carlos_profile_pic.jpeg';
+import heroBg from '../assets/images/hy50_sunset_backgroud.jpeg';
 
 const entries = (await getCollection('entries'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -18,31 +22,41 @@ const entries = (await getCollection('entries'))
   </head>
   <body>
     <Header />
+
+    <section class="hero">
+      <Image src={heroBg} alt="" class="hero-bg" />
+      <div class="profile-container">
+        <Image src={profilePic} alt="Carlos Martinez Tuanama" class="profile-pic" />
+      </div>
+    </section>
+
     <main>
       <section class="intro">
+        <h1>Carlos Martinez Tuanama</h1>
         <p>
-          This is a public journal where I preserve what I'm learning about growth, relationships,
-          and values—primarily for my kids, and secondarily for anyone I care about who might need
-          it.
+          This is a public journal where I preserve and clarify what I'm learning about growth,
+          relationships, and values—primarily for my kids, and secondarily for anyone I care about
+          who might need it.
         </p>
       </section>
 
       {
         entries.length > 0 && (
           <section class="entries">
-            <h2>Recent entries</h2>
-            <ul>
-              {entries.map((entry) => (
-                <li>
-                  <a href={`/${entry.id}/`}>
-                    <span class="entry-title">{entry.data.title}</span>
-                    <span class="entry-date">
-                      <FormattedDate date={entry.data.pubDate} />
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {entries.map((entry) => (
+              <article class="entry">
+                <header>
+                  <h2>
+                    <a href={`/${entry.id}/`}>{entry.data.title}</a>
+                  </h2>
+                  <span class="entry-date">
+                    <FormattedDate date={entry.data.pubDate} format="long" />
+                  </span>
+                </header>
+                <p class="entry-description">{entry.data.description}</p>
+                <a href={`/${entry.id}/`} class="see-more">See more</a>
+              </article>
+            ))}
           </section>
         )
       }
@@ -52,80 +66,143 @@ const entries = (await getCollection('entries'))
 </html>
 
 <style>
+  .hero {
+    position: relative;
+    height: 280px;
+    overflow: visible;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .profile-container {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
   .intro {
+    text-align: center;
     margin-bottom: 3rem;
-  }
-
-  .intro p {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin: 0;
-  }
-
-  .entries h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1.25rem;
-  }
-
-  .entries ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .entries li {
-    margin: 0;
+    padding-bottom: 2rem;
     border-bottom: 1px solid var(--border);
   }
 
-  .entries li:last-child {
+  .intro h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .entry {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .entry:last-child {
     border-bottom: none;
   }
 
-  .entries a {
+  .entry header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: baseline;
-    gap: 1rem;
-    padding: 0.875rem 0;
-    text-decoration: none;
-    color: var(--text);
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
-  .entries a:hover .entry-title {
+  .entry h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .entry h2 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .entry h2 a:hover {
     color: var(--link);
   }
 
-  .entry-title {
-    font-weight: 400;
-  }
-
   .entry-date {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    white-space: nowrap;
+    font-style: italic;
   }
 
-  .all-entries {
-    margin-top: 1.5rem;
+  .entry-description {
+    color: var(--text);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
   }
 
-  .all-entries a {
+  .see-more {
     font-size: 0.95rem;
+    font-weight: 500;
   }
 
-  @media (max-width: 500px) {
-    .entries a {
-      flex-direction: column;
-      gap: 0.25rem;
+  @media (max-width: 600px) {
+    .hero {
+      height: 200px;
     }
 
-    .entry-date {
-      font-size: 0.8rem;
+    .hero-bg {
+      height: 200px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+
+    .profile-container {
+      bottom: -50px;
+    }
+
+    main {
+      padding-top: 70px;
+    }
+
+    .intro h1 {
+      font-size: 1.5rem;
+    }
+
+    .entry header {
+      flex-direction: column;
+      gap: 0.25rem;
     }
   }
 </style>

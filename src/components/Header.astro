@@ -4,7 +4,7 @@ import { SITE_TITLE } from '../consts';
 
 <header>
   <nav>
-    <a href="/" class="site-title">{SITE_TITLE}</a>
+    <a href="/" class="site-title">{SITE_TITLE.toUpperCase()}</a>
     <div class="nav-links">
       <a href="/about">About</a>
     </div>
@@ -13,27 +13,29 @@ import { SITE_TITLE } from '../consts';
 
 <style>
   header {
-    border-bottom: 1px solid var(--border);
+    background: #1e3a5f;
   }
 
   nav {
-    max-width: 640px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .site-title {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     text-decoration: none;
-    color: var(--text);
+    color: #fff;
   }
 
   .site-title:hover {
-    color: var(--link);
+    color: #e0e0e0;
   }
 
   .nav-links {
@@ -42,18 +44,19 @@ import { SITE_TITLE } from '../consts';
   }
 
   .nav-links a {
+    font-family: system-ui, -apple-system, sans-serif;
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: #fff;
     text-decoration: none;
   }
 
   .nav-links a:hover {
-    color: var(--text);
+    color: #e0e0e0;
   }
 
   @media (max-width: 600px) {
     nav {
-      padding: 1rem;
+      padding: 0.875rem 1rem;
     }
 
     .nav-links {
