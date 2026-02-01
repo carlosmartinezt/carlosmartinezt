@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -7,7 +8,7 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'entries'>['data'];
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -19,6 +20,12 @@ const { title, description, pubDate, updatedDate } = Astro.props;
     <Header />
     <main>
       <article>
+        {heroImage && (
+          <div class="hero-image">
+            <Image src={heroImage} alt="" width={640} />
+          </div>
+        )}
+
         <header class="entry-header">
           <p class="entry-date">
             <FormattedDate date={pubDate} />
@@ -47,6 +54,16 @@ const { title, description, pubDate, updatedDate } = Astro.props;
 </html>
 
 <style>
+  .hero-image {
+    margin-bottom: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
   .entry-header {
     margin-bottom: 2.5rem;
   }
