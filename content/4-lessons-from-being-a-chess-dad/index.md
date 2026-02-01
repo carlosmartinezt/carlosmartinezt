@@ -13,7 +13,7 @@ Here are four lessons from this journey.
 
 Rather than measuring progress against other chess families, everyone plays a different game. You can only compare yourself with who you were yesterday because we are all playing a different game.
 
-![Rapha's ELO rating progress](../assets/images/raphas_elo_rating.webp)
+![Rapha's ELO rating progress](./raphas_elo_rating.webp)
 
 Comparing oneself to others breeds discouragement and confidence loss, yet these feelings signal when adjustments are needed.
 
@@ -25,7 +25,7 @@ At the highest competitive levels, even Grand Masters lose roughly 49% of their 
 
 Meeting chess champion Irina Krush reinforced that sustained commitment yields long-term benefits. Those at the highest professional ranks typically remained in their field longest.
 
-![Meeting Irina Krush](../assets/images/ikrush.webp)
+![Meeting Irina Krush](./ikrush.webp)
 
 ## Lesson 4: Enjoy the Game
 

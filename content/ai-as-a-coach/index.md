@@ -15,7 +15,7 @@ Things are also moving very fast. New models, new workflows, new expectations. I
 
 The risk is subtle. Efficiency quietly becomes shorthand for speed, and speed becomes a way to outsource thinking.
 
-![blog placeholder](../assets/images/ai-as-a-coach/using-ai-more-is-not-the-same-as-doing-better-work.jpg)
+![blog placeholder](./using-ai-more-is-not-the-same-as-doing-better-work.jpg)
 
 ## A Better Mental Model: AI as a Coach for Your Thinking
 
@@ -33,7 +33,7 @@ A simple test applies to any AI-assisted work: if you can’t clearly explain it
 
 The question I keep coming back to is simple: is AI helping me think better, or just faster? If we optimize for better thinking instead of visible AI usage, the efficiency we care about will follow.
 
-![blog placeholder](../assets/images/ai-as-a-coach/image2.jpg)
+![blog placeholder](./image2.jpg)
 
 # Core idea I want to carry forward
 
@@ -48,6 +48,6 @@ Once clarity of thinking is achieved, speed, efficiency, and execution tend to f
 > **2/1/26 Update:** Oh, how wrong I was. The best model so far is Claude Opus 4.5. What a difference!
 
 
-![blog placeholder](../assets/images/ai-as-a-coach/image3.jpg)
-![blog placeholder](../assets/images/ai-as-a-coach/image4.jpg)
-![blog placeholder](../assets/images/ai-as-a-coach/image5.jpg)
+![blog placeholder](./image3.jpg)
+![blog placeholder](./image4.jpg)
+![blog placeholder](./image5.jpg)

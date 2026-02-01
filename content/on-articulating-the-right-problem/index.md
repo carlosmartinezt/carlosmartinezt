@@ -3,7 +3,7 @@ title: 'On Articulating The Right Problem'
 description: 'Lack of clarity causes teams to focus on wrong problems. Even strong execution produces poor outcomes when addressing symptoms rather than root causes.'
 pubDate: '2022-12-14'
 author: 'Carlos Martinez Tuanama'
-heroImage: '../assets/images/stop-solving-the-wrong-problems.png'
+heroImage: './stop-solving-the-wrong-problems.png'
 ---
 
 ## Problem Statement
