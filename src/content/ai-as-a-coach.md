@@ -1,7 +1,7 @@
 ---
 title: 'AI as a Coach'
 description: 'AI is becoming part of how we build software. It helps us write code faster, explore ideas more quickly, and try things we wouldn’t have attempted before. That’s real progress. But using AI more is not the same as doing better work.'
-pubDate: '2026-01-31'
+pubDate: '2026-01-16'
 author: 'Carlos Martinez Tuanama'
 ---
 
@@ -44,6 +44,9 @@ Clear thinking means being able to articulate what you’re concerned about, why
 For me, AI—especially GPT-5—has been most valuable as a way to reach that clarity over the past few weeks. Not by giving answers, but by helping structure thoughts, surface assumptions, and force articulation. Other models can generate output, but they’re less effective at sharpening reasoning itself.
 
 Once clarity of thinking is achieved, speed, efficiency, and execution tend to follow naturally. Clarity is the real leverage point.
+
+> **2/1/26 Update:** Oh, how wrong I was. The best model so far is Claude Opus 4.5. What a difference!
+
 
 ![blog placeholder](../assets/images/ai-as-a-coach/image3.jpg)
 ![blog placeholder](../assets/images/ai-as-a-coach/image4.jpg)
