@@ -73,6 +73,23 @@ npm run dev
 
 Site runs at http://localhost:4321
 
+Note: The base path (`/carlosmartinezt`) is only applied in CI/production, so localhost works at the root.
+
+---
+
+## When Switching to Custom Domain (carlosmartinezt.com)
+
+Update `astro.config.mjs` to remove the conditional logic:
+
+```js
+export default defineConfig({
+  site: 'https://carlosmartinezt.com',
+  integrations: [mdx(), sitemap()],
+});
+```
+
+No `base` path needed with a custom domain.
+
 ---
 
 ## Project Structure
