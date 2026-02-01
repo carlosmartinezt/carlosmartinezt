@@ -59,3 +59,5 @@ Pushes to `main` trigger automatic deployment to GitHub Pages via `.github/workf
 
 - Default: https://carlosmartinezt.github.io/carlosmartinezt/
 - Custom domain: https://carlosmartinezt.com
+
+**GitHub Pages base path:** Since the site is deployed to a subdirectory (`/carlosmartinezt/`), `astro.config.mjs` must include `base: '/carlosmartinezt'`. Without this, all internal links will be broken. If a custom domain is configured later, remove the `base` setting and update `site` to the custom domain.
