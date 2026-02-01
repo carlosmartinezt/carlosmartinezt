@@ -15,7 +15,7 @@ Things are also moving very fast. New models, new workflows, new expectations. I
 
 The risk is subtle. Efficiency quietly becomes shorthand for speed, and speed becomes a way to outsource thinking.
 
-![blog placeholder](../assets/ai-as-a-coach/image1.jpg)
+![blog placeholder](../assets/ai-as-a-coach/using-ai-more-is-not-the-same-as-doing-better-work.jpg)
 
 ## A Better Mental Model: AI as a Coach for Your Thinking
 
