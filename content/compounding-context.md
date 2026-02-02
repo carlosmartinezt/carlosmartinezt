@@ -11,7 +11,7 @@ I found something different. It's called Claude Code, and the thing that makes i
 
 Let me explain what I mean.
 
-I have a folder in Google Drive. Inside it, I keep notes about everything - work projects, personal goals, todos, even random thoughts. When I start a conversation with Claude Code, it reads a file called CLAUDE.md that points to all this context. So when I ask it something, it's not starting from zero. It knows what I'm working on. It knows what I care about. It remembers.
+I have a folder in Google Drive. Inside it, I keep notes about everything - work projects, personal goals, to-dos, even random thoughts. When I start a conversation with Claude Code, it reads a file called CLAUDE.md that points to all this context. So when I ask it something, it's not starting from zero. It knows what I'm working on. It knows what I care about. It remembers.
 
 Not "remembers" like ChatGPT's memory feature where it stores random facts about you. I mean it literally has access to my notes, my goals, my ongoing projects. When I'm thinking through something, it has the same context I have.
 
@@ -19,7 +19,7 @@ Not "remembers" like ChatGPT's memory feature where it stores random facts about
 
 I have a goals document. It has my Q1 priorities, things I want to focus on, tensions I'm navigating (like wanting to lead more but also not wanting to drop the ball). When I'm processing feedback from work or thinking through a decision, I don't have to re-explain all of that. Claude already sees it. So the conversation starts at a higher level.
 
-Same with my todo list. It's organized by urgency - what's immediate, what's important but not urgent, what I'm waiting on from other people. When I brain dump something new, Claude can help me figure out where it goes, what it connects to, what I might be forgetting.
+Same with my to-do list. It's organized by urgency - what's immediate, what's important but not urgent, what I'm waiting on from other people. When I brain dump something new, Claude can help me figure out where it goes, what it connects to, what I might be forgetting.
 
 ## The system I use
 
