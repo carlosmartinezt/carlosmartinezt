@@ -1,0 +1,67 @@
+---
+---
+
+<button class="theme-toggle" aria-label="Toggle theme">
+  <span class="icon sun">☀</span>
+  <span class="icon moon">☽</span>
+</button>
+
+<style>
+  .theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #fff;
+    transition: color 0.15s ease;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .theme-toggle:hover {
+    color: #e0e0e0;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Show sun in dark mode (to switch to light) */
+  :global([data-theme='dark']) .sun {
+    opacity: 1;
+  }
+
+  /* Show moon in light mode (to switch to dark) */
+  :global(:root:not([data-theme='dark'])) .moon {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  function setupToggle() {
+    const toggle = document.querySelector('.theme-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
+
+  setupToggle();
+  document.addEventListener('astro:after-swap', setupToggle);
+</script>

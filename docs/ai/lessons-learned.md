@@ -27,6 +27,33 @@ Critical fixes and patterns. Add new lessons here.
 
 ---
 
+## Theme System
+
+### Lesson: Theme flash on page load/navigation
+**Problem:** When using dark mode, page flashes white before theme applies.
+
+**Fix:** Add an inline script in `<head>` (via BaseHead.astro) that sets `data-theme` BEFORE any content renders. Must use `is:inline` directive so Astro doesn't defer it.
+
+See: `docs/ai/components/theme-toggle.md`
+
+---
+
+## Favicon
+
+### Note: Favicon generation from photo
+Favicon uses the profile photo (`src/assets/images/carlos_profile_pic.jpeg`). Generated with macOS `sips`:
+
+```bash
+sips -z 32 32 -s format png SOURCE --out public/favicon.png
+sips -z 16 16 -s format png SOURCE --out public/favicon-16x16.png
+sips -z 180 180 -s format png SOURCE --out public/apple-touch-icon.png
+```
+
+Files in `public/`: `favicon.png`, `favicon-16x16.png`, `apple-touch-icon.png`
+Links defined in: `src/components/BaseHead.astro`
+
+---
+
 ## Template for New Lessons
 
 ```markdown

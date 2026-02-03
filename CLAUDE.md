@@ -1,5 +1,26 @@
 # CLAUDE.md
 
+---
+## CRITICAL: Document Your Work
+**After ANY technical code change, you MUST document learnings immediately:**
+
+1. **Component-specific docs** - Create/update `docs/ai/components/<component-name>.md`
+2. **Patterns & gotchas** - Add to `docs/ai/lessons-learned.md`
+3. **Architecture changes** - Update `docs/ai/architecture.md`
+
+This is NOT optional. Future sessions depend on this context. Be proactive.
+
+---
+
+## Style Guide (for all content)
+
+**Never use hyphens (-)** in prose. Use alternative punctuation:
+- Instead of em dashes (—), use periods, commas, or restructure the sentence
+- Instead of en dashes (–), spell out ranges ("2020 to 2022")
+- Hyphens in compound words are acceptable only when grammatically required
+
+---
+
 ## Quick Context
 Personal journal - preserving lessons about growth, relationships, and values for my kids.
 
@@ -11,6 +32,7 @@ Personal journal - preserving lessons about growth, relationships, and values fo
 Read these docs for context:
 - `docs/ai/architecture.md` - Data flow and content system
 - `docs/ai/component-library.md` - UI primitives (DO NOT reinvent)
+- `docs/ai/components/` - Component-specific documentation
 - `docs/ai/lessons-learned.md` - Hard bugs (CHECK BEFORE DEBUGGING)
 - `docs/ethos.md` - Core mission and constraints
 - `docs/principles.md` - Design principles
@@ -53,6 +75,3 @@ public/               # Static assets
 - Override URL: add `slug: custom-url` to frontmatter
 
 Folder structure doesn't affect URLs. Filenames must be unique.
-
-## Compounding Context
-At session end, update `docs/ai/lessons-learned.md` with bugs fixed and patterns discovered.
