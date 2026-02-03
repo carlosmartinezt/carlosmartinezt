@@ -2,9 +2,9 @@
 
 These principles guide every editorial and design decision.
 
-## 1. Primary Audience is Explicit
+## 1. Audience is Layered
 
-Your kids come first. This protects you from chasing validation or trends. Every edit should pass the test: "Would I want them to read this?"
+Today's readers are family, coworkers, and friends. Your kids are the ultimate audience—they'll read it someday. Writing with them in mind keeps content durable and sincere, but you're not writing *to* a 9-year-old. The practical test: "Would I share this with my sister? My team? A friend?"
 
 ## 2. Authority is Intentionally Limited
 

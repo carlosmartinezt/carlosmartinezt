@@ -2,9 +2,15 @@
 
 ## Core Mission
 
-This is a public journal where I preserve and clarify what I'm learning about growth, relationships, and values—primarily for my kids, and secondarily for anyone I care about who might need it.
+This is a public journal where I preserve and clarify what I'm learning about growth, relationships, and values.
 
-If you hold yourself to that sentence, most decisions become trivial.
+**Audience layers:**
+- **Today's readers:** family (wife, sister, in-laws), coworkers (reports, manager, colleagues), and friends (school parents, close community)
+- **Ultimate audience:** my kids—they won't read it now, but someday they might
+
+The kids are the north star, not the daily readers. Writing for them keeps the content durable and sincere. But the practical test is: would I share this with my sister? My team? A friend?
+
+If you hold yourself to this framing, most decisions become trivial.
 
 ## What This Rules Out
 
