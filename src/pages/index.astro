@@ -7,8 +7,8 @@ import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
 
-import profilePic from '../assets/images/carlos_profile_pic.jpeg';
-import heroBg from '../assets/images/hy50_sunset_backgroud.jpeg';
+import profilePic from '../assets/images/carlos_profile_pic2.png';
+import heroBg from '../assets/images/hy50_sunset_backgroud2.png';
 
 const entries = (await getCollection('entries'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
