@@ -197,6 +197,25 @@ th {
   margin-top: 2rem;
 }
 
+/* Side-by-side images */
+.image-row {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.image-row img {
+  flex: 1;
+  min-width: 0;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .image-row {
+    flex-direction: column;
+  }
+}
+
 /* Screen reader only */
 .sr-only {
   position: absolute;
