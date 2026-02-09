@@ -1,0 +1,154 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allEntries = await getCollection('entries');
+  const tags = [...new Set(allEntries.flatMap((entry) => entry.data.tags))];
+
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      entries: allEntries
+        .filter((entry) => entry.data.tags.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+interface Props {
+  tag: string;
+  entries: Awaited<ReturnType<typeof getCollection<'entries'>>>;
+}
+
+const { tag, entries } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Tagged: ${tag} — ${SITE_TITLE}`} description={`Posts tagged "${tag}"`} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="tag-header">
+        <h1>Tagged: {tag}</h1>
+        <a href="/">← Back to all entries</a>
+      </section>
+
+      <section class="entries">
+        {entries.map((entry) => (
+          <article class="entry">
+            <header>
+              <h2>
+                <a href={`/${entry.id}/`}>{entry.data.title}</a>
+              </h2>
+              <span class="entry-date">
+                <FormattedDate date={entry.data.pubDate} format="long" />
+              </span>
+              {entry.data.tags.length > 0 && (
+                <span class="tags">
+                  {entry.data.tags.map((t: string) => (
+                    <a href={`/tags/${t}/`} class:list={['tag', { active: t === tag }]}>{t}</a>
+                  ))}
+                </span>
+              )}
+            </header>
+            <p class="entry-description">{entry.data.description}</p>
+            <a href={`/${entry.id}/`} class="see-more">See more</a>
+          </article>
+        ))}
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .tag-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tag-header h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .tag-header a {
+    font-size: 0.95rem;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .entry {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .entry:last-child {
+    border-bottom: none;
+  }
+
+  .entry header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .entry h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .entry h2 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .entry h2 a:hover {
+    color: var(--link);
+  }
+
+  .entry-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  .entry-description {
+    color: var(--text);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.6;
+  }
+
+  .see-more {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .active {
+    background: var(--link);
+    color: var(--bg);
+  }
+
+  @media (max-width: 600px) {
+    .entry header {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>

@@ -11,7 +11,7 @@ interface Props extends CollectionEntry<'entries'>['data'] {
   nextEntry?: { id: string; title: string } | null;
 }
 
-const { title, description, pubDate, updatedDate, heroImage, prevEntry, nextEntry } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags = [], prevEntry, nextEntry } = Astro.props;
 ---
 
 <html lang="en">
@@ -48,6 +48,14 @@ const { title, description, pubDate, updatedDate, heroImage, prevEntry, nextEntr
         </div>
 
         <footer class="entry-footer">
+          {tags.length > 0 && (
+            <div class="entry-tags">
+              <span class="entry-tags-label">Tags:</span>
+              {tags.map((tag: string) => (
+                <a href={`/tags/${tag}/`} class="tag">{tag}</a>
+              ))}
+            </div>
+          )}
           <nav class="entry-nav">
             {nextEntry ? (
               <a href={`/${nextEntry.id}/`} class="nav-link nav-prev">
@@ -104,6 +112,20 @@ const { title, description, pubDate, updatedDate, heroImage, prevEntry, nextEntr
   .entry-header h1 {
     margin: 0;
     line-height: 1.25;
+  }
+
+  .entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .entry-tags-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-right: 0.15rem;
   }
 
   .entry-footer {

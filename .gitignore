@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Claude Code local settings (not project settings or skills)
 .claude/settings.local.json
+
+# Playwright MCP screenshots
+.playwright-mcp/

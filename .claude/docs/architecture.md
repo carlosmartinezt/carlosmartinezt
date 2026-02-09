@@ -46,10 +46,29 @@ dist/                       Static HTML (GitHub Pages)
 | Pattern | Example | URL |
 |---------|---------|-----|
 | Simple entry | `content/my-post.md` | `/my-post/` |
-| Entry with images | `content/my-post/index.md` | `/my-post/` |
+| Entry with images | `content/my-post/my-post.md` + images in same folder | `/my-post/` |
 | Nested (year) | `content/2024/my-post.md` | `/my-post/` |
 
+### Naming Convention
+
+Content files that need co-located assets (images, etc.) live in a folder. The markdown file inside uses the **same name as the folder**, not `index.md`. For example: `content/my-post/my-post.md`, not `content/my-post/index.md`.
+
 Folder structure does not affect URLs. Only filename (or frontmatter `slug`) determines the URL.
+
+## Tags System
+
+Posts can have tags via `tags: [tag1, tag2]` in frontmatter. Defaults to `[]`.
+
+| Route | File | Purpose |
+|-------|------|---------|
+| `/tags/[tag]/` | `src/pages/tags/[tag].astro` | Tag archive page, lists matching posts |
+
+Tags render as `.tag` pill links in:
+- `BlogPost.astro` (below date, above title)
+- `index.astro` (inline in entry header, after date)
+- `tags/[tag].astro` (inline in entry header, active tag highlighted)
+
+Current tags: `ai`, `career`, `thinking`, `parenting`.
 
 ## External APIs
 

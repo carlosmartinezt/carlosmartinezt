@@ -12,10 +12,6 @@ const entries = defineCollection({
       const withoutExt = entry.replace(/\.mdx?$/, '');
       const parts = withoutExt.split('/');
       const filename = parts.pop() as string;
-      // If it's index.md, use parent folder name
-      if (filename === 'index') {
-        return parts.pop() as string;
-      }
       return filename;
     },
   }),
@@ -28,6 +24,7 @@ const entries = defineCollection({
       pubDate: z.coerce.date(),
       updatedDate: z.coerce.date().optional(),
       heroImage: image().optional(),
+      tags: z.array(z.string()).default([]),
     }),
 });
 

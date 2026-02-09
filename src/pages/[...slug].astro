@@ -31,6 +31,6 @@ const { entry, prevEntry, nextEntry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<BlogPost {...entry.data} prevEntry={prevEntry} nextEntry={nextEntry}>
+<BlogPost {...entry.data} tags={entry.data.tags} prevEntry={prevEntry} nextEntry={nextEntry}>
   <Content />
 </BlogPost>

@@ -17,11 +17,11 @@
 [data-theme='dark'] {
   --bg: #2d2d2d;
   --bg-subtle: #3a3a3a;
-  --text: #e8e4de;
-  --text-secondary: #a0998f;
+  --text: #f0ece6;
+  --text-secondary: #b8b0a5;
   --border: #4a4a4a;
-  --link: #c9a68a;
-  --link-hover: #dfc4a8;
+  --link: #d4b193;
+  --link-hover: #e5ccb0;
 }
 
 *,
@@ -51,6 +51,10 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
+}
+
+[data-theme='dark'] body {
+  font-weight: 420;
 }
 
 /* Typography */
@@ -214,6 +218,31 @@ th {
   .image-row {
     flex-direction: column;
   }
+}
+
+/* Tag pills */
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+  background: var(--bg-subtle);
+  color: var(--link);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tag:hover {
+  background: var(--link);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 /* Screen reader only */

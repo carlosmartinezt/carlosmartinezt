@@ -14,10 +14,15 @@ This is NOT optional. Future sessions depend on this context. Be proactive.
 
 ## Style Guide (for all content)
 
+**Use headings, blockquotes, bullet points, etc** it makes the content more 
+visually appealing
+
 **Never use hyphens (-)** in prose. Use alternative punctuation:
 - Instead of em dashes (—), use periods, commas, or restructure the sentence
 - Instead of en dashes (–), spell out ranges ("2020 to 2022")
 - Hyphens in compound words are acceptable only when grammatically required
+
+**Emojis**: Use sparingly in posts. 
 
 ---
 

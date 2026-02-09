@@ -20,10 +20,10 @@ Critical fixes and patterns. Add new lessons here.
 
 ---
 
-### Lesson: Astro cache causes duplicate ID warnings
-**Problem:** After moving files, Astro showed "Duplicate id" warnings during build.
+### Lesson: Astro cache causes stale references after renaming content files
+**Problem:** After renaming or moving content files, Astro's `.astro/` cache retains old file paths, causing build failures with "Rollup failed to resolve import" errors referencing the old filenames.
 
-**Fix:** Clear the Astro cache: `rm -rf node_modules/.astro` then rebuild.
+**Fix:** Clear both cache locations: `rm -rf .astro node_modules/.astro` then rebuild.
 
 ---
 

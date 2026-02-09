@@ -52,6 +52,13 @@ const entries = (await getCollection('entries'))
                   <span class="entry-date">
                     <FormattedDate date={entry.data.pubDate} format="long" />
                   </span>
+                  {entry.data.tags.length > 0 && (
+                    <span class="tags">
+                      {entry.data.tags.map((tag: string) => (
+                        <a href={`/tags/${tag}/`} class="tag">{tag}</a>
+                      ))}
+                    </span>
+                  )}
                 </header>
                 <p class="entry-description">{entry.data.description}</p>
                 <a href={`/${entry.id}/`} class="see-more">See more</a>
