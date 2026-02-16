@@ -19,7 +19,7 @@ Defined in `src/styles/global.css`:
 ## Layout Components
 
 ### Header (`src/components/Header.astro`)
-Navy bar with site title and nav links.
+Navy bar with site title, nav links, search, and theme toggle.
 ```astro
 <Header />
 ```
@@ -63,6 +63,13 @@ Active-aware navigation link.
 ```astro
 <HeaderLink href="/about">About</HeaderLink>
 ```
+
+### Search (`src/components/Search.astro`)
+Client-side search with build-time JSON index. Renders a magnifying glass icon button in the header that opens a search overlay.
+```astro
+<Search />
+```
+See: `docs/ai/components/search.md`
 
 ## Typography Classes
 

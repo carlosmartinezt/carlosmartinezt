@@ -37,6 +37,7 @@ dist/                       Static HTML (GitHub Pages)
 |-------|------|---------|
 | Content Config | `src/content.config.ts` | Schema, glob loader, ID generation |
 | Dynamic Route | `src/pages/[...slug].astro` | Entry pages with navigation |
+| Search Index | `src/pages/search-index.json.ts` | Static JSON endpoint for client-side search |
 | Layout | `src/layouts/BlogPost.astro` | Entry wrapper with header/footer |
 | Styles | `src/styles/global.css` | CSS variables and typography |
 | Constants | `src/consts.ts` | Site title and description |

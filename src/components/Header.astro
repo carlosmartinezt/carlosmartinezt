@@ -1,5 +1,6 @@
 ---
 import { SITE_TITLE } from '../consts';
+import Search from './Search.astro';
 import ThemeToggle from './ThemeToggle.astro';
 ---
 
@@ -8,6 +9,7 @@ import ThemeToggle from './ThemeToggle.astro';
     <a href="/" class="site-title">{SITE_TITLE.toUpperCase()}</a>
     <div class="nav-links">
       <a href="/about">About</a>
+      <Search />
       <ThemeToggle />
     </div>
   </nav>
