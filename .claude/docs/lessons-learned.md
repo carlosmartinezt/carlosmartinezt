@@ -54,6 +54,22 @@ Links defined in: `src/components/BaseHead.astro`
 
 ---
 
+## Deployment
+
+### Lesson: GitHub Pages can silently become disabled
+**Problem:** Site returned 404 even though the deploy workflow was succeeding. The GitHub API showed `"has_pages": false`, meaning Pages was disabled on the repo while the workflow kept running successfully.
+
+**Fix:** Re-enable Pages via the API or repo Settings > Pages. Then verify the custom domain is set (may require domain verification at the account level if GitHub says "domain already taken"). Finally, re-trigger the deploy workflow. Key diagnostic: check `gh api repos/OWNER/REPO/pages` and look for `has_pages` in the repo info.
+
+---
+
+### Lesson: "Custom domain already taken" on GitHub Pages
+**Problem:** After re-enabling Pages, setting the custom domain fails with "already taken" even though you own it.
+
+**Fix:** Go to GitHub account Settings > Pages > Verified domains, add and verify the domain (requires adding a TXT DNS record). Once verified, the domain can be assigned to the repo's Pages site.
+
+---
+
 ## Template for New Lessons
 
 ```markdown
