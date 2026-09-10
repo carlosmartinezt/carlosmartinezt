@@ -15,7 +15,7 @@ I still ship code. Everything below runs in production on a server I administer 
 
 | | | |
 |---|---|---|
-| **Context Viewer**<br>https://private.carlosmartinezt.com<br>[demo](https://context-viewer-demo.carlosmartinezt.com) | A login-gated viewer for my private notes: every file served is logged, and I get an email on lockouts and new-IP logins. Built so I can keep a private notebook without giving up an audit trail. | Node · Server-side auth · Logging |
+| **Context Viewer**<br>https://context-viewer-demo.carlosmartinezt.com | A login-gated viewer for my private notes: every file served is logged, and I get an email on lockouts and new-IP logins. Built so I can keep a private notebook without giving up an audit trail. | Node · Server-side auth · Logging |
 | **SaveYourChess**<br>https://www.saveyourchess.com/try | Imports your full game history from Chess.com and Lichess and makes every position, opening, and mistake searchable. Built on the bet that players don't lack analysis, they lack recall. | ASP.NET Core · React · TypeScript · Stockfish |
 | **Video Lyrics**<br>https://videolyrics.org | Upload an mp3, paste the lyrics, get a lyric video. Forced alignment finds when each word is sung, then the browser itself encodes the MP4 with WebCodecs, so the server never touches video. | React · TypeScript · Vite · wav2vec2 |
 | **NJ Transit**<br>https://njtransit.carlosmartinezt.com<br>[source](https://github.com/carlosmartinezt/njtransit) | A single-page departure board for NJ TRANSIT buses, built for one moment: standing in Port Authority, needing to know the gate before the bus leaves. Offline-first and installable. | Preact · TypeScript · Vite · Node |
